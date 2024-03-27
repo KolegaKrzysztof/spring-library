@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/search-style.css">
+</head>
+<body>
+<div th:replace="~{/fragments.html :: menu}"></div>
+<form method="post">
+    <input type="text" placeholder="Search books..." name="pattern">
+    <input type="submit" class="button" value="Search">
+</form>
+<div th:replace="~{/fragments.html :: books}"></div>
+
+</body>
+</html>
