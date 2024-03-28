@@ -2,18 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/register-style.css">
+    <link rel="stylesheet" type="text/css" href="/index-style.css">
 </head>
 <body>
 <div th:replace="~{/fragments.html :: menu}"></div>
 <form method="post">
     <input type="text" placeholder="login" th:field="*{user.login}" required>
     <input type="password" placeholder="password" th:field="*{user.password}" required>
-    <input type="text" placeholder="name" th:field="*{user.name}" required>
-    <input type="text" placeholder="surname" th:field="*{user.surname}" required>
     <input type="submit" class="button" value="Sign up">
 </form>
-<p th:if="${exist != null and exist}" class="errorMessage">Login taken!</p>
+<p th:if="${exist != null and exist}" class="errorMessage">Login is taken!</p>
 
 </body>
 </html>
