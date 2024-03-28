@@ -45,8 +45,8 @@ public class BorrowService implements IBorrowService {
     }
 
     @Override
-    public List<Borrow> getAllLoaned() {
-        return this.borrowDAO.getAllLoaned();
+    public List<Borrow> getAllBorrowed() {
+        return this.borrowDAO.getAllBorrowed();
     }
 
     @Override

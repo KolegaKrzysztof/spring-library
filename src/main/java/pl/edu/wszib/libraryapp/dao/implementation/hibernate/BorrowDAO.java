@@ -49,7 +49,7 @@ public class BorrowDAO implements IBorrowDAO {
     }
 
     @Override
-    public List<Borrow> getAllLoaned() {
+    public List<Borrow> getAllBorrowed() {
         Session session = this.sessionFactory.openSession();
         Query<Borrow> query = session.createQuery(ALL_LOANED_BOOKS,Borrow.class);
         List<Borrow> result = query.getResultList();

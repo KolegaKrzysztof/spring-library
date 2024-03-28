@@ -26,7 +26,7 @@ public class CommonController {
     @RequestMapping(path = {"/", "/main", "/index"}, method = RequestMethod.GET)
     public String main(Model model) {
         model.addAttribute("books", this.bookService.getAll());
-        model.addAttribute("rented", this.borrowService.getAllLoaned());
+        model.addAttribute("rented", this.borrowService.getAllBorrowed());
         model.addAttribute("isLogged",
                 this.sessionObject.isLogged());
         model.addAttribute("isAdmin",

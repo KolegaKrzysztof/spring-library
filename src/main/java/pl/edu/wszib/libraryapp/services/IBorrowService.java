@@ -8,7 +8,7 @@ public interface IBorrowService {
     void persist(int bookId);
     List<Borrow> getAllById(int id);
     List<Borrow> getAll();
-    List<Borrow> getAllLoaned();
+    List<Borrow> getAllBorrowed();
     List<Borrow> getAllOverdue();
-    void bookReturn(int loanId);
+    void bookReturn(int borrowId);
 }
